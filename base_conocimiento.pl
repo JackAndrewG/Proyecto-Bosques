@@ -1,3 +1,9 @@
+
+
+
+
+
+
 saltoLinea():-write('\n').
 
 codigo(bsPn02).
