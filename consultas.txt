@@ -1,0 +1,3 @@
+consult('C:/Users/jack_/OneDrive/Documentos/U/10th course/Expert Systems/Proyecto-Bosques/base_conocimiento.pl').
+
+bosque(bsPn02).
