@@ -1,15 +1,4 @@
 %%%%%%%%%%%%%%%%%%      CODIGOS     %%%%%%%%%%%%%%%%%%
-codigo(bsPn02).
-codigo(bePn02).
-codigo(bmPn01).
-codigo(bdPn01).
-codigo(bsBn05).
-codigo(beBn01).
-codigo(bmBn01).
-codigo(bdBn01).
-codigo(bsMn04).
-codigo(bsAn04).
-
 en_codigos(bsPn02, 'Bosque siempreverde piemontano', codigoBosque).
 en_codigos(bePn02, 'Bosque siempreverde estacional piemontano', codigoBosque).
 en_codigos(bmPn01, 'Bosque semideciduo piemontano', codigoBosque).
@@ -27,15 +16,8 @@ codigos([X, Y|Xs]) :- en_codigos(X, Y, codigoBosque), codigos(Xs).
 %%%%%%%%%%%%%%%%%%      CODIGOS     %%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%      NIVELES     %%%%%%%%%%%%%%%%%%
-nivel(1).
-nivel(2).
-nivel(3).
-nivel(4).
-nivel(5).
-nivel(6).
 
 niveles(Nivel):-
-    nivel(Nivel),
     consult('importaciones.pl'),
     writeln('Clasificadores Prescriptivos: '),
     clasificadoresPrescriptivos(Nivel),
@@ -46,7 +28,6 @@ niveles(Nivel):-
 
 %%%%%%%%%%%%%%%%%%      BOSQUES     %%%%%%%%%%%%%%%%%%
 bosque(Codigo):-
-    codigo(Codigo),
     consult('importaciones.pl'),
     getNombre(Codigo), 
     getClasificacion(),
