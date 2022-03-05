@@ -12,7 +12,7 @@ codigo(bsMn04).
 codigo(bsAn04).
 
 
-getNombre(Codigo):- nombre(Codigo, Nombre), write('Nombre del Bosque: \n\t'), write(Nombre), sector, saltoLinea.%busca relacion Codigo-Nombre, escribe Nombre del Bosque: , escribe Nombre, escribe sector
+getNombre(Codigo):- nombre(Codigo, Nombre), write('Nombre del Bosque: '), write(Nombre), sector, saltoLinea.%busca relacion Codigo-Nombre, escribe Nombre del Bosque: , escribe Nombre, escribe sector
 
 nombre(bsPn02, 'Bosque siempreverde piemontano del ').%ese codigo tiene ese titulo
 nombre(bePn02, 'Bosque siempreverde estacional piemontano del ').
@@ -25,16 +25,7 @@ nombre(bdBn01, 'Bosque deciduo montano bajo del ').
 nombre(bsMn04, 'Bosque siempreverde montano del ').
 nombre(bsAn04, 'Bosque siempreverde montano alto del ').
 
-listado():-write('bsPn02 - Bosque siempreverde piemontano'),
-write('\nbePn02 - Bosque siempreverde estacional piemontano'),
-write('\nbmPn01 - Bosque semideciduo piemontano'),
-write('\nbdPn01 - Bosque deciduo piemontano'),
-write('\nbsBn05 - Bosque siempreverde montano bajo'),
-write('\nbeBn01 - Bosque siempreverde estacional montano bajo'),
-write('\nbmBn01 - Bosque semideciduo montano bajo'),
-write('\nbdBn01 - Bosque deciduo montano bajo '),
-write('\nbsMn04 - Bosque siempreverde montano '),
-write('\nbsAn04 - Bosque siempreverde montano alto').
+
 % getClasificacion(Codigo):- clasificacion(Codigo, Clasificacion1, Clasificacion2), write('Clasificacion: '), write(Clasificacion1), write(' / '), write(Clasificacion2), saltoLinea.
 
 % clasificacion(
@@ -43,7 +34,7 @@ write('\nbsAn04 - Bosque siempreverde montano alto').
 %     'ecosistema'
 % ).
 
-getClasificacion():- write('Clasificacion: \n\t'), vegetal, write(' / '), ecosistema, saltoLinea.
+getClasificacion():- write('Clasificacion: '), vegetal, write(' / '), ecosistema, saltoLinea.
 
 vegetal():-write('formacion vegetal').
 ecosistema():-write('ecosistema').
@@ -119,7 +110,7 @@ tipoOmbrotipo(bdBn01, ombrotipoSeco, ombrotipoNaN).
 % tipoOmbrotipo(bsMn04, ombrotipoHumedo, ombrotipoHiperhumedo).
 % tipoOmbrotipo(bsAn04, ombrotipoHumedo, ombrotipoHiperhumedo).
 
-bioclima(Codigo):- write('Bioclima: \n\t'), tipoBioclima(Codigo, Bioclima), Bioclima, write(' Ombrotipo: '), tipoOmbrotipo(Codigo, Tipo1, Tipo2), Tipo1, Tipo2, saltoLinea.
+bioclima(Codigo):- write('Bioclima: '), tipoBioclima(Codigo, Bioclima), Bioclima, write(' Ombrotipo: '), tipoOmbrotipo(Codigo, Tipo1, Tipo2), Tipo1, Tipo2, saltoLinea.
 % bioclima(Codigo):- tipoBioclima(Codigo),.
 % bioclima(Codigo):- tipoBioclima(Codigo),.
 
@@ -130,88 +121,63 @@ ombrotipoSubhumedo():-write('subhumedo ').
 ombrotipoHiperhumedo():-write('hiperhumedo ').
 ombrotipoNaN():-write(' ').
 
-
-
 region():- write("Andes").
 provincia():- write("Andes del Norte").
 % sector(catamayo_alamor).
 sector():-  write("Catamayo - Alamor").%podemos reutilizar esto para los titulos pq se repite
-
-biogeografia():- write("Biogeografia: \n\tRegion: "),region(),write(", \n\tProvincia: "), provincia(),write(", \n\tSector: "), sector(), saltoLinea.
-
-
-getFenologia(Codigo):-fenologia(Codigo, Tipo), write('Fenologia: '), write(Tipo), saltoLinea.
-
-fenologia(bsPn02, 'Siempreverde').
-fenologia(bePn02, 'Siempreverde estacional').
-fenologia(bmPn01, 'Semideciduo').
-fenologia(bdPn01, 'Deciduo').
-fenologia(bsBn05, 'Siempreverde').
-fenologia(beBn01, 'Siempreverde estacional').
-fenologia(bmBn01, 'Semideciduo').
-fenologia(bdBn01, 'Decidua').
-fenologia(bsMn04, 'Siempreverde').
-fenologia(bsAn04, 'Siempreverde').
+biogeografia():- write("BiogeografÌa: \n\tRegiÛn: "),region(),write(", \n\tProvincia: "), provincia(),write(", \n\tSector: "), sector().
 
 
-piso(bsPn02, 'Piemontano (400-1600 msnm)').
-piso(bePn02, 'Piemontano (400-1600 msnm)').
-piso(bmPn01, 'Piemontano (400-1600 msnm)').
-piso(bdPn01, 'Piemontano (400-1600 msnm)').
-piso(bsBn05, 'Montano (1600-2200 msnm)').
-piso(beBn01, 'Montano bajo (1600-2000msnm)').
-piso(bmBn01, 'Montano bajo (1600-2200 msnm)').
-piso(bdBn01, 'Montano bajo (1600-2200 msnm)').
-piso(bsMn04, 'Montano (2200-2900msnm)').
-piso(bsAn04, 'Montano alto (2900-3400 msnm)').
+getFenologia(Codigo):- fenologia(Codigo, Tipo), write('FenologÌa: '),write(Tipo), saltoLinea.
+
+fenologia(bsPn02, "siempreverde").
+fenologia(bePn02, "siempreverde estacional").
+fenologia(bmPn01, "semideciduo").
+fenologia(bdPn01, "deciduo").
+fenologia(bsBn05, "siempreverde").
+fenologia(beBn01, "siempreverde estacional").
+fenologia(bmBn01, "semideciduo").
+fenologia(bdBn01, "decidua").
+fenologia(bsMn04, "siempreverde").
+fenologia(bsAn04, "siempreverde").
+
+piso(codigo,termotipo):- write("Elevaci√≥n: 400-1600 msnm").
 
 
-termotipo(bsPn02, 'Termotropical').
-termotipo(bePn02, 'Termotropical').
-termotipo(bmPn01, 'Termotropical').
-termotipo(bdPn01, 'Termotropical').
-termotipo(bsBn05, 'Termotropical Superior').
-termotipo(beBn01, 'Termotropical Superior').
-termotipo(bmBn01, 'Termotropical').
-termotipo(bdBn01, 'Termotropical Superior').
-termotipo(bsMn04, 'Mesotropical').
-termotipo(bsAn04, 'Supratropical').
+
+piso(piemontano).
+piso(montano).
+piso(montano_bajo).
+piso(montano_alto).
+
+termotipo(codigo):-write("termotropical").
+termotipo(codigo):-write("termotropical_superior").
+termotipo(codigo):-write("mesotermotropical").
+termotipo(codigo):-write("supratropical").
+termotipo(codigo):-write("termotropical_inferior").
+termotipo(codigo):-write("mesotropical").
+
+piso_bioclimatico(codigo):-write(piso,termotipo).
 
 
-piso_bioclimatico(Codigo):-piso(Codigo, P),write("Piso Bioclimatico: \n\t"),write(P), termotipo(Codigo, Term),write(", \n\tTermotipo: "),write(Term).
+relieve_general(codigo):-write("De monta√±a").
+
+macrorelieve(codigo):-write("cordillera").
+macrorelieve(codigo):-write("serrania").
+macrorelieve(codigo):-write("piedemonte").
+
+mesorelieve(codigo):- write("Vertientes").
+mesorelieve(codigo):- write("Vertientes Disectadas").
+mesorelieve(codigo):- write("cuesta").
+mesorelieve(codigo):- write("colinas_y_cuestas").
+
+geoforma(codigo):- relieve_general(codigo), macrorelieve(codigo), mesorelieve(codigo).
 
 
-relieve_general():-write('Relieve General:  De montania').
+inundabilidad(no_inundable).
 
-macrorelieve(bsPn02, 'Cordillera, Piedemonte').
-macrorelieve(bePn02, 'Piedemonte').
-macrorelieve(bmPn01, 'Piedemonte').
-macrorelieve(bdPn01, 'Piedemonte').
-macrorelieve(bsBn05, 'Cordillera').
-macrorelieve(beBn01, 'Cordillera, Serran√≠a').
-macrorelieve(bmBn01, 'Serran√≠a').
-macrorelieve(bdBn01, 'Serran√≠a').
-macrorelieve(bsMn04, 'Cordillera').
-macrorelieve(bsAn04, 'Cordillera').
-
-mesorelieve(bsPn02, 'Vertientes, Colinas y Cuestas').
-mesorelieve(bePn02, 'Colinas y Cuestas').
-mesorelieve(bmPn01, 'Colinas y Cuestas').
-mesorelieve(bdPn01, 'Colinas y Cuestas').
-mesorelieve(bsBn05, 'Vertientes disectadas').
-mesorelieve(beBn01, 'Vertientes disectadas').
-mesorelieve(bmBn01, 'Cuesta').
-mesorelieve(bdBn01, 'Vertientes disectadas').
-mesorelieve(bsMn04, 'Vertientes disectadas').
-mesorelieve(bsAn04, 'Vertientes disectadas').
-
-geoforma(Codigo):-write('\nGeoforma:\n\t'), relieve_general(),write('\n\tMacrorelieve: '), macrorelieve(Codigo,Ma),write(Ma),write('\n\tMesorelieve: '), mesorelieve(Codigo,Me),write(Me).
-
-
-inundabilidad():-write('\nInundabilidad General: \n\tRegimen de Inundacion: No inundable').
-
-factoresDiagnostico(Codigo):- fisionomia, bioclima(Codigo), biogeografia(), getFenologia(Codigo), piso_bioclimatico(Codigo),geoforma(Codigo),inundabilidad.
+factoresDiagnostico(Codigo):- fisionomia, bioclima(Codigo), biogeografia(),getFenologia(Codigo).
 
 bosque(Codigo):-
-codigo(Codigo), getNombre(Codigo), getClasificacion(),write('\nReconocido por: \n'), reconocer(Codigo, ceron),reconocer(Codigo, valencia),
-reconocer(Codigo, josse),write('\nFactores Diagnosticos: \n\n'), factoresDiagnostico(Codigo). %, valencia(codigo), josse(codigo), factores_diagnostico(codigo).
+codigo(Codigo), getNombre(Codigo), getClasificacion(), reconocer(Codigo, ceron),reconocer(Codigo, valencia),
+reconocer(Codigo, josse), factoresDiagnostico(Codigo). %, valencia(codigo), josse(codigo), factores_diagnostico(codigo).

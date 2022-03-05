@@ -1,3 +1,14 @@
 consult('C:/Users/jack_/OneDrive/Documentos/U/10th course/Expert Systems/Proyecto-Bosques/base_conocimiento.pl').
 
+listado(). %Muestra listado de los bosques con su codigo
+
 bosque(bsPn02).
+bosque(bePn02).
+bosque(bmPn01).
+bosque(bdPn01).
+bosque(bsBn05).
+bosque(beBn01).
+bosque(bmBn01).
+bosque(bdBn01).
+bosque(bsMn04).
+bosque(bsAn04).
