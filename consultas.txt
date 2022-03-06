@@ -1,6 +1,6 @@
-consult('C:/Users/jack_/OneDrive/Documentos/U/10th course/Expert Systems/Proyecto-Bosques/base_conocimiento.pl').
+consult('C:/Users/jack_/OneDrive/Documentos/U/10th course/Expert Systems/Proyecto-Bosques/inicio.pl').
 
-listado(). %Muestra listado de los bosques con su codigo
+codigos(). %Muestra listado de los bosques con su codigo
 
 bosque(bsPn02).
 bosque(bePn02).
@@ -12,3 +12,7 @@ bosque(bmBn01).
 bosque(bdBn01).
 bosque(bsMn04).
 bosque(bsAn04).
+
+divBiogeograficas().
+
+niveles(1).
