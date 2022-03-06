@@ -17,5 +17,9 @@ consult('niveles/nivel1.pl'),
 consult('niveles/nivel3.pl'),
 consult('niveles/nivel4.pl'),
 consult('niveles/nivel5.pl'),
-consult('niveles/nivel6.pl').
+consult('niveles/nivel6.pl'),
 %%%%%%%%%%%%%%%%%%      NIVELES     %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%      DIVISIONES BIOGEOGRAFICAS     %%%%%%%%%%%%%%%%%%
+consult('divisionesBiogeograficas/divisionesBiogeograficas.pl').
+%%%%%%%%%%%%%%%%%%      DIVISIONES BIOGEOGRAFICAS     %%%%%%%%%%%%%%%%%%

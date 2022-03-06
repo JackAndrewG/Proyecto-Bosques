@@ -15,6 +15,12 @@ codigos([X, Y]) :- en_codigos(X, Y, codigoBosque).
 codigos([X, Y|Xs]) :- en_codigos(X, Y, codigoBosque), codigos(Xs).
 %%%%%%%%%%%%%%%%%%      CODIGOS     %%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%      DIVISIONES BIOGEOGRAFICAS     %%%%%%%%%%%%%%%%%%
+divBiogeograficas():-
+    consult('importaciones.pl'),
+    divisionesBiogeograficas().
+%%%%%%%%%%%%%%%%%%      DIVISIONES BIOGEOGRAFICAS     %%%%%%%%%%%%%%%%%%
+
 %%%%%%%%%%%%%%%%%%      NIVELES     %%%%%%%%%%%%%%%%%%
 
 niveles(Nivel):-
