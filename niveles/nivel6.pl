@@ -3,7 +3,7 @@ pisosFloristicos(piemontano, '\tpiemontano').
 pisosFloristicos(montanoBajo, '\tmontano bajo').
 pisosFloristicos(montano, '\tmontano').
 pisosFloristicos(montanoAlto, '\tmontano alto').
-pisosFloristicos(tierrasAltoSuperior, '\ttierras alto superior').
+pisosFloristicos(montanoAltoSuperior, '\tmontano alto superior').
 pisosFloristicos(subnival, '\tsubnival').
 
 etiquetaPisos():-writeln('Pisos Floristicos: ').

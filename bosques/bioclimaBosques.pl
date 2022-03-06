@@ -18,7 +18,7 @@ bioclima(Codigo):-
     write('Bioclima: \n\t'), 
     tipoBioclima(Codigo, Bioclima), 
     Bioclima, 
-    write(' Ombrotipo: '), 
+    etiquetaOmbrotipo(),
     tipoOmbrotipo(Codigo, Tipo1, Tipo2), 
     Tipo1, 
-    Tipo2.
+    Tipo2,write('\n').

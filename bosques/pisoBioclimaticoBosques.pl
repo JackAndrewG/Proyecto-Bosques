@@ -1,17 +1,24 @@
-piso(bsPn02, 'Piemontano (400-1600 msnm)').
-piso(bePn02, 'Piemontano (400-1600 msnm)').
-piso(bmPn01, 'Piemontano (400-1600 msnm)').
-piso(bdPn01, 'Piemontano (400-1600 msnm)').
-piso(bsBn05, 'Montano (1600-2200 msnm)').
-piso(beBn01, 'Montano bajo (1600-2000msnm)').
-piso(bmBn01, 'Montano bajo (1600-2200 msnm)').
-piso(bdBn01, 'Montano bajo (1600-2200 msnm)').
-piso(bsMn04, 'Montano (2200-2900msnm)').
-piso(bsAn04, 'Montano alto (2900-3400 msnm)').
+tipoElevacion(bsPn02,1500).
+tipoElevacion(bePn02,1500).
+tipoElevacion(bmPn01,1500).
+tipoElevacion(bdPn01,1500).
+tipoElevacion(bsBn05,2100).
+tipoElevacion(beBn01,1700).
+tipoElevacion(bmBn01,1700).
+tipoElevacion(bdBn01,1700).
+tipoElevacion(bsMn04,2500).
+tipoElevacion(bsAn04,3000).
+
+elevacion(X, pisos(piemontano)):- X<1600, !.
+elevacion(X,pisos(montanoBajo)):- X>1600 | X<2000, !.
+elevacion(X,pisos(montano)):- X>1600 | X<2200, !.
+elevacion(X,pisos(montanoAlto)):- X>2200 | X<2900, !.
+elevacion(X,pisos(montanoAltoSuperior)):- X>2900 | X<3400, !.
 
 piso_bioclimatico(Codigo):-
-    piso(Codigo, P),
-    write("Piso Bioclimatico: \n\t"),
-    writeln(P), 
+    write("Piso Bioclimatico: \n"),
+    tipoElevacion(Codigo,Elevacion),
+    elevacion(Elevacion,Piso),Piso,
+    etiquetaTermotipo(),
     tipoTermotipo(Codigo, Tm), 
     Tm.

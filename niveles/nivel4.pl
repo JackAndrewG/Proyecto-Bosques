@@ -37,19 +37,19 @@ tipoMacrorelieve(bdBn01, macrorelieves(serrania)).
 tipoMacrorelieve(bsMn04, macrorelieves(cordillera)).
 tipoMacrorelieve(bsAn04, macrorelieves(cordillera)).
 
-ombrotipo(seco, '\tseco').
-ombrotipo(semiarido, '\tsemiarido').
-ombrotipo(desertico, '\tdesertico').
-ombrotipo(humedo, '\thumedo').
-ombrotipo(subhumedo, '\tsubhumedo').
-ombrotipo(hiperhumedo, '\thiperhumedo').
-ombrotipo(ultrahumedo, '\tultrahumedo').
+ombrotipo(seco, 'seco ').
+ombrotipo(semiarido, 'semiarido ').
+ombrotipo(desertico, 'desertico ').
+ombrotipo(humedo, 'humedo ').
+ombrotipo(subhumedo, 'subhumedo ').
+ombrotipo(hiperhumedo, 'hiperhumedo ').
+ombrotipo(ultrahumedo, 'ultrahumedo ').
 ombrotipo(nan, ' ').
 
-etiquetaOmbrotipo():-writeln('Ombrotipo: ').
+etiquetaOmbrotipo():-write(' Ombrotipo: ').
 
 ombrotipos(Co):-
-    ombrotipo(Co, Respuesta), writeln(Respuesta).
+    ombrotipo(Co, Respuesta), write(Respuesta).
 
 tipoOmbrotipo(bsPn02, ombrotipos(humedo), ombrotipos(hiperhumedo)).
 tipoOmbrotipo(bePn02, ombrotipos(humedo), ombrotipos(nan)).

@@ -79,7 +79,7 @@ clasificadoresPrescriptivos(Nivel):-
     pisos(montanoBajo), 
     pisos(montano),
     pisos(montanoAlto), 
-    pisos(tierrasAltoSuperior), 
+    pisos(montanoAltoSuperior), 
     pisos(subnival).
     
     clasificadoresOpcionales(Nivel):-

@@ -12,9 +12,9 @@ mesorelieve(bsMn04, 'Vertientes disectadas').
 mesorelieve(bsAn04, 'Vertientes disectadas').
 
 geoforma(Codigo):- 
-    write('\nGeoforma:\n\t'), 
+    write('Geoforma:\n\t'), 
     relieve_general(),
-    write('\n\tMacrorelieve: '), 
-    tipoMacrorelieve(Codigo,Ma),write(Ma),
-    write('\n\tMesorelieve: '), 
+    writeln('\tMacrorelieve: '), 
+    tipoMacrorelieve(Codigo,Ma),Ma,
+    write('\tMesorelieve: '), 
     mesorelieve(Codigo,Me),writeln(Me).
