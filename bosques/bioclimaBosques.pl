@@ -1,6 +1,6 @@
-bioclimaPluvial():- write("pluvial").
-bioclimaPluviestacional():- write("pluviestacional").
-bioclimaXerico():- write("xerico").
+bioclimaPluvial():- write('Pluvial').
+bioclimaPluviestacional():- write('Pluviestacional').
+bioclimaXerico():- write('Xerico').
 
 tipoBioclima(bsPn02, bioclimaPluvial).
 tipoBioclima(bePn02, bioclimaPluviestacional).

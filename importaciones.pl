@@ -1,6 +1,6 @@
 :- 
 %%%%%%%%%%%%%%%%%%      BOSQUES     %%%%%%%%%%%%%%%%%%
-writeln('consultando...'),
+%writeln('consultando...'),
 consult('bosques/bioclimaBosques.pl'),
 consult('bosques/biogeografiaBosques.pl'),
 consult('bosques/factoresDiagnosticoBosques.pl'),

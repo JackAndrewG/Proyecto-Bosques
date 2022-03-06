@@ -17,16 +17,16 @@ sectorBiogeografico(cordillerasAmazonicas, 'Cordilleras Amazonicas').
 etiquetaSector():-writeln('Sector Biogeografico: ').
 
 sBioge(Sb):-
-    sectorBiogeografico(Sb, Respuesta),writeln(Respuesta).
+    sectorBiogeografico(Sb, Respuesta),write('\t'),writeln(Respuesta).
 
 
-termotipo(infratoprical, 'infratoprical').
-termotipo(termotropical, 'termotropical'). 
-termotipo(termotropicalSuperior, 'termotropical Superior'). 
-termotipo(mesotropical, 'mesotropical').
-termotipo(supratropical, 'supratropical'). 
-termotipo(orotropical, 'orotropical').
-termotipo(criorotropical, 'criorotropical').
+termotipo(infratoprical, '\tInfratoprical').
+termotipo(termotropical, '\tTermotropical'). 
+termotipo(termotropicalSuperior, '\tTermotropical Superior'). 
+termotipo(mesotropical, '\tmesotropical').
+termotipo(supratropical, '\tSupratropical'). 
+termotipo(orotropical, '\tCrotropical').
+termotipo(criorotropical, '\tCriorotropical').
 
 etiquetaTermotipo():-writeln('Termotipo: ').
 
@@ -45,9 +45,9 @@ tipoTermotipo(bsMn04, termotipos(mesotropical)).
 tipoTermotipo(bsAn04, termotipos(supratropical)).
 
 
-origenAguasinundacion(riosOrigenAndino, 'rios de origen andino').
-origenAguasinundacion(cordillerasAmazonicas, 'rios de cordilleras amazonicas').
-origenAguasinundacion(riosOrigenAmazonico, 'rios de origen amazonico').
+origenAguasinundacion(riosOrigenAndino, '\tRios de origen andino').
+origenAguasinundacion(cordillerasAmazonicas, '\tRios de cordilleras amazonicas').
+origenAguasinundacion(riosOrigenAmazonico, '\tRios de origen amazonico').
 
 etiquetaOrigenAgua():-writeln('Origen de Aguas de Inundacion: ').
 

@@ -1,6 +1,6 @@
-regionBiogeografica(litoral, 'litoral').
-regionBiogeografica(andes, 'andes').
-regionBiogeografica(amazonia, 'amazonia').
+regionBiogeografica(litoral, '\tLitoral').
+regionBiogeografica(andes, '\tAndes').
+regionBiogeografica(amazonia, '\tAmazonia').
 
 etiquetaRegion():-writeln('Region Biogeografica: ').
 

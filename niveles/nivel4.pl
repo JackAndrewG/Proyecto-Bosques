@@ -1,7 +1,7 @@
-provinciaBiogeografica(choco, 'Choco').
-provinciaBiogeografica(pacificoEc, 'Pacifico Ecuatorial').
-provinciaBiogeografica(andesNor, 'Andes del Norte').
-provinciaBiogeografica(amazoniaNor, 'Amazonia Noroccidental').
+provinciaBiogeografica(choco, '\tChoco').
+provinciaBiogeografica(pacificoEc, '\tPacifico Ecuatorial').
+provinciaBiogeografica(andesNor, '\tAndes del Norte').
+provinciaBiogeografica(amazoniaNor, '\tAmazonia Noroccidental').
 
 etiquetaProvincia():-writeln('Provincias Biogeograficas: ').
 
@@ -9,15 +9,15 @@ provincias(Cp):-
     provinciaBiogeografica(Cp, Respuesta), writeln(Respuesta).
  
 
-macrorelieve(serrania, 'serrania').
-macrorelieve(valleGlaciar, 'valle glaciar').
-macrorelieve(valleTectonico, 'valle tectonico').
-macrorelieve(cordillera, 'cordillera').
-macrorelieve(piedemonte, 'piedemonte').
-macrorelieve(isla, 'isla').
-macrorelieve(piedemontePeriandino, 'piedemonte periandino').
-macrorelieve(penillanura, 'penillanura').
-macrorelieve(llanura, 'llanura').
+macrorelieve(serrania, '\tserrania').
+macrorelieve(valleGlaciar, '\tvalle glaciar').
+macrorelieve(valleTectonico, '\tvalle tectonico').
+macrorelieve(cordillera, '\tcordillera').
+macrorelieve(piedemonte, '\tpiedemonte').
+macrorelieve(isla, '\tisla').
+macrorelieve(piedemontePeriandino, '\tpiedemonte periandino').
+macrorelieve(penillanura, '\tpenillanura').
+macrorelieve(llanura, '\tllanura').
 
 etiquetaMacrorelieve():-writeln('Macrorelieve: ').
 
@@ -37,13 +37,13 @@ tipoMacrorelieve(bdBn01, macrorelieves(serrania)).
 tipoMacrorelieve(bsMn04, macrorelieves(cordillera)).
 tipoMacrorelieve(bsAn04, macrorelieves(cordillera)).
 
-ombrotipo(seco, 'seco').
-ombrotipo(semiarido, 'semiarido').
-ombrotipo(desertico, 'desertico').
-ombrotipo(humedo, 'humedo').
-ombrotipo(subhumedo, 'subhumedo').
-ombrotipo(hiperhumedo, 'hiperhumedo').
-ombrotipo(ultrahumedo, 'ultrahumedo').
+ombrotipo(seco, '\tseco').
+ombrotipo(semiarido, '\tsemiarido').
+ombrotipo(desertico, '\tdesertico').
+ombrotipo(humedo, '\thumedo').
+ombrotipo(subhumedo, '\tsubhumedo').
+ombrotipo(hiperhumedo, '\thiperhumedo').
+ombrotipo(ultrahumedo, '\tultrahumedo').
 ombrotipo(nan, ' ').
 
 etiquetaOmbrotipo():-writeln('Ombrotipo: ').
@@ -63,19 +63,19 @@ tipoOmbrotipo(bsMn04, ombrotipos(humedo), ombrotipos(hiperhumedo)).
 tipoOmbrotipo(bsAn04, ombrotipos(humedo), ombrotipos(hiperhumedo)).
 
 
-fenologiaGeneral(siempreverde, 'siempreverde').
-fenologiaGeneral(siempreverdeEstacional, 'siempreverde estacional').
-fenologiaGeneral(semideciduo, 'semideciduo').
-fenologiaGeneral(deciduo, 'deciduo').
+fenologiaGeneral(siempreverde, '\tsiempreverde').
+fenologiaGeneral(siempreverdeEstacional, '\tsiempreverde estacional').
+fenologiaGeneral(semideciduo, '\tsemideciduo').
+fenologiaGeneral(deciduo, '\tdeciduo').
 
 etiquetaFenologia():-writeln('Fenologia General: ').
 
 fenologias(Cf):-
     fenologiaGeneral(Cf, Respuesta), writeln(Respuesta).
 
-regimenInundacion(inundado, 'inundado').
-regimenInundacion(inundable, 'inundable').
-regimenInundacion(noInundable, 'no inundable').
+regimenInundacion(inundado, '\tinundado').
+regimenInundacion(inundable, '\tinundable').
+regimenInundacion(noInundable, '\tno inundable').
 
 etiquetaInundacion():-write('Regimen Inundacion: ').
 

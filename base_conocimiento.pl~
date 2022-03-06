@@ -43,7 +43,7 @@ ecosistema():-write('ecosistema').
 reconocer(Codigo, Reconocedor):- reconocedor(Reconocedor), reconocimiento(Codigo, Reconocedor, Reconocimiento), Reconocimiento, saltoLinea; noReconoce, saltoLinea.
 
 noReconoce():-write('No reconoce').
-reconocimientoCeron():-write('sector estribaciones de la cordillera occidental, subregion sur').
+reconocimientoCeron():-write('Sector estribaciones de la cordillera occidental, subregion sur').
 reconocimientoValencia():- write("Bosque de neblina montano, sector sur de la Cordillera Occidental, subregion sur").
 reconocimientoJosseCES409113():-write("CES409.113 Bosques pluviales piemontanos de los Andes del Norte").
 reconocimientoJosseCES409114():-write("CES409.114 Bosques piemontanos pluviestacionales subhÃºmedo de los Andes del Norte").
@@ -125,10 +125,10 @@ region():- write("Andes").
 provincia():- write("Andes del Norte").
 % sector(catamayo_alamor).
 sector():-  write("Catamayo - Alamor").%podemos reutilizar esto para los titulos pq se repite
-biogeografia():- write("Biogeografía: \n\tRegión: "),region(),write(", \n\tProvincia: "), provincia(),write(", \n\tSector: "), sector().
+biogeografia():- write("Biogeografï¿½a: \n\tRegiï¿½n: "),region(),write(", \n\tProvincia: "), provincia(),write(", \n\tSector: "), sector().
 
 
-getFenologia(Codigo):- fenologia(Codigo, Tipo), write('Fenología: '),write(Tipo), saltoLinea.
+getFenologia(Codigo):- fenologia(Codigo, Tipo), write('Fenologï¿½a: '),write(Tipo), saltoLinea.
 
 fenologia(bsPn02, "siempreverde").
 fenologia(bePn02, "siempreverde estacional").

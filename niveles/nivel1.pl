@@ -1,6 +1,6 @@
-fisionomia(bosque, 'bosque').
-fisionomia(arbustal, 'arbustal').
-fisionomia(herbal, 'herbazal').
+fisionomia(bosque, '\tBosque').
+fisionomia(arbustal, '\tArbustal').
+fisionomia(herbal, '\tHerbazal').
 
 etiquetaFisionomia():-writeln('Fiosionomia: ').
 

@@ -1,5 +1,5 @@
 %Relacion entre codigo y nombre
-nombre(bsPn02, 'Bosque siempreverde piemontano del ').
+nombre(bsPn02, 'BsPn02 - Bosque siempreverde piemontano del ').
 nombre(bePn02, 'Bosque siempreverde estacional piemontano del ').
 nombre(bmPn01, 'Bosque semideciduo piemontano del ').
 nombre(bdPn01, 'Bosque deciduo piemontano del ').
